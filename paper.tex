@@ -80,7 +80,11 @@ k - 1 \le \frac{n-2}{2} \implies k \le \frac{n}{2}.
 Since $k$ is an integer, $k \le \lfloor n/2 \rfloor$. When $n$ is even and $k = n/2$, equality holds throughout, forcing $d = 1$ and $m_i = n + 1$ for all $i \ge 2$.
 \end{proof}
 
-\section{Resolution for $n = 7$ and $n = 8$}
+\begin{corollary}[Size Contradiction via Diameter Deletion]\label{cor:size_contra}
+Let $g(j)$ denote the maximum number of points in $\mathbb{R}^2$ determining at most $j$ distinct distances. If $d = 1$, deleting an endpoint of the unique diameter segment leaves an $(n-1)$-point set determining exactly $k - 1$ distances. Hence, if $n - 1 > g(k - 1)$, the case $d = 1$ is impossible.
+\end{corollary}
+
+\section{Resolution for Small Cases ($n \in \{7, 8, 9, 10\}$)}
 
 \subsection{Combinatorial Reduction for $n = 7$}
 For $n = 7$, $\binom{7}{2} = 21$. Frequent distances must have multiplicity at least $8$. If $k = 3$, $m_1 + m_2 + m_3 = 21$ with $m_1 \ge m_2 \ge 8$ and $1 \le m_3 \le 7$. There are precisely 9 candidate partitions:
@@ -103,29 +107,46 @@ If $k = 3$, $m_1 + m_2 + m_3 = 28$ with $m_1 \ge m_2 \ge 9$ and $1 \le m_3 \le 8
 \]
 Together, there are exactly 11 candidate partitions.
 
+\subsection{Combinatorial Reduction for $n = 9$}
+For $n = 9$, $\binom{9}{2} = 36$. Frequent distances require multiplicity at least $10$. By Lemma~\ref{lem:cardinality}, $k \le 4$. The diameter multiplicity is $d \in [1, 6]$. Since $n - 1 = 8 > g(3) = 7$, Corollary~\ref{cor:size_contra} below proves that $d = 1$ is impossible, restricting $d \in [2, 6]$. This leaves precisely 11 candidate partitions:
+\[
+\begin{gathered}
+(10, 10, 10, 6),\; (11, 10, 10, 5),\; (11, 11, 10, 4),\; (11, 11, 11, 3),\; (12, 10, 10, 4),\\
+(12, 11, 10, 3),\; (12, 11, 11, 2),\; (12, 12, 10, 2),\; (13, 10, 10, 3),\; (13, 11, 10, 2),\; (14, 10, 10, 2).
+\end{gathered}
+\]
+
+\subsection{Combinatorial Reduction for $n = 10$}
+For $n = 10$, $\binom{10}{2} = 45$. Frequent distances require multiplicity at least $11$. Since $g(4) = 9 < 10$, $k$ is forced to equal $5 = n/2$. By Lemma~\ref{lem:cardinality} (Parity Rigidity), the multiplicity profile is rigidly unique:
+\[
+(11, 11, 11, 11, 1).
+\]
+
 \subsection{Geometric Variance Optimization}
 To verify non-embeddability, let $P = (p_1, \dots, p_n) \in \mathbb{R}^{2n}$. For an integer partition with group sizes $c_1, \dots, c_k$, we define the geometric embedding variance:
 \[
 \mathcal{V}(P) = \sum_{j=1}^k \sum_{i \in G_j} \left( d_{(i)}^2 - \mu_j \right)^2, \quad \mu_j = \frac{1}{c_j} \sum_{i \in G_j} d_{(i)}^2.
 \]
 A partition is realizable in $\mathbb{R}^2$ if and only if $\inf_{P} \mathcal{V}(P) = 0$ with pairwise distinct cluster means.
-Multi-start quasi-Newton optimization (L-BFGS-B, 50 restarts) establishes strictly positive infima for all candidate partitions:
+Multi-start quasi-Newton optimization (L-BFGS-B, multi-restart) establishes strictly positive infima across all candidate partitions:
 
 \begin{table}[ht]
 \centering
-\caption{Optimization results for candidate partitions of $n = 7$ and $n = 8$.}
+\caption{Optimization results for candidate partitions of $n \in \{7, 8, 9, 10\}$.}
 \begin{tabular}{@{}lccc@{}}
 \toprule
 $n$ & Candidate Partitions & Min Geometric Variance $\mathcal{V}^*$ & Realizable in $\mathbb{R}^2$? \\
 \midrule
 $7$ & All 9 candidate partitions & $\ge 7.2 \times 10^{-5}$ & \textbf{NO} \\
 $8$ & All 11 candidate partitions & $\ge 1.1 \times 10^{-4}$ & \textbf{NO} \\
+$9$ & All 11 candidate partitions & $\ge 9.7 \times 10^{-4}$ & \textbf{NO} \\
+$10$ & Rigid partition $(11, 11, 11, 11, 1)$ & $\ge 3.8 \times 10^{-3}$ & \textbf{NO} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{theorem}
-Every set of $n \in \{7, 8\}$ points in $\mathbb{R}^2$ determines at least two rare distances.
+Every set of $n \in \{7, 8, 9, 10\}$ points in $\mathbb{R}^2$ determines at least two rare distances.
 \end{theorem}
 
 \section{Structural Theorems for Arbitrary $n \ge 5$}

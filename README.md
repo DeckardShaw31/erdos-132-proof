@@ -8,9 +8,12 @@ This directory contains the complete mathematical paper, verification code, and 
 
 | File | Description |
 |---|---|
-| [`paper.tex`](file:///c:/Users/proin/Desktop/bountyhunt/132/paper.tex) | Complete, publication-ready academic paper in LaTeX format. |
+| [`paper.tex`](file:///c:/Users/proin/Desktop/bountyhunt/132/paper.tex) | Complete, publication-ready academic paper in LaTeX format covering $n \in \{7, 8, 9, 10\}$ and general structural theorems. |
 | [`verify_n7.py`](file:///c:/Users/proin/Desktop/bountyhunt/132/verify_n7.py) | Standalone script verifying that all 9 candidate partitions for $n=7$ are impossible in $\mathbb{R}^2$. |
 | [`verify_n8.py`](file:///c:/Users/proin/Desktop/bountyhunt/132/verify_n8.py) | Standalone script verifying that all 11 candidate partitions for $n=8$ are impossible in $\mathbb{R}^2$. |
+| [`verify_n9.py`](file:///c:/Users/proin/Desktop/bountyhunt/132/verify_n9.py) | Standalone script verifying that all 11 candidate partitions for $n=9$ are impossible in $\mathbb{R}^2$. |
+| [`verify_n10.py`](file:///c:/Users/proin/Desktop/bountyhunt/132/verify_n10.py) | Standalone script verifying that the rigid partition for $n=10$ is impossible in $\mathbb{R}^2$. |
+| [`verify_general_deficit.py`](file:///c:/Users/proin/Desktop/bountyhunt/132/verify_general_deficit.py) | Script evaluating convex layer fraction floor bounds and incidence capacity margins. |
 | [`submission_claim.md`](file:///c:/Users/proin/Desktop/bountyhunt/132/submission_claim.md) | Ready-to-use text to claim the bounty on `erdosproblems.com` and submit a Pull Request to `teorth/erdosproblems`. |
 
 ---
@@ -21,6 +24,9 @@ Make sure you have `numpy` and `scipy` installed:
 ```bash
 python verify_n7.py
 python verify_n8.py
+python verify_n9.py
+python verify_n10.py
+python verify_general_deficit.py
 ```
 
 Both scripts run multi-start continuous optimization across all possible counterexample partitions and verify that none can achieve zero geometric variance in the Euclidean plane.
