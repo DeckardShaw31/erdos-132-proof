@@ -28,7 +28,7 @@ Gemini 2.5 Pro / Antigravity AI assistant
 
 ### Field 4: URL to a human-readable writeup of the proof (use an arXiv link if available)
 ```text
-https://github.com/DeckardShaw31/erdos-132-proof/blob/main/paper.pdf
+https://github.com/DeckardShaw31/erdos-132-proof/blob/main/main.pdf
 ```
 *(Note: If you name your repository differently, replace `erdos-132-proof` with your repository name. You can also link `https://github.com/DeckardShaw31/erdos-132-proof` or an OSF / Zenodo / arXiv link).*
 
@@ -63,7 +63,7 @@ To generate your live public link before hitting submit on the website:
    git branch -M main
    git push -u origin main
    ```
-4. Once pushed, `paper.pdf`, `paper.tex`, `paper.html`, `verify_n7.py`, and `verify_n8.py` will be live and publicly viewable at:
+4. Once pushed, `main.pdf`, `paper.tex`, `verify_n7.py`, and `verify_n8.py` will be live and publicly viewable at:
    `https://github.com/DeckardShaw31/erdos-132-proof`
 
 ---
