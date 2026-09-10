@@ -1,4 +1,4 @@
-# Erdős Problem #132 Research Package ($100 Bounty)
+# Erdős Problem #132 Research Package 
 
 This directory contains the complete mathematical paper, verification code, and submission materials giving a **complete affirmative resolution of Erdős Problem #132 across all $n \ge 5$**.
 
