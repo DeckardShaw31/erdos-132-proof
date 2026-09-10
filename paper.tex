@@ -1,5 +1,6 @@
 \documentclass[11pt,reqno]{article}
 \usepackage[utf8]{inputenc}
+\usepackage[T5,T1]{fontenc}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{geometry}
 \usepackage{booktabs}
@@ -17,7 +18,7 @@
 \newtheorem{remark}[theorem]{Remark}
 
 \title{\textbf{On the Existence of Rare Distances in Small Planar Point Sets:\\Resolving Erd\H{o}s Problem \#132 for $n = 7$ and $n = 8$}}
-\author{Nguyễn Nhật Thanh}
+\author{{\fontencoding{T5}\selectfont Nguyễn Nhật Thanh}}
 \date{September 2026}
 
 \begin{document}
@@ -97,7 +98,10 @@ Suppose there are 3 or more frequent distances. Then the sum of pairs would be a
 
 The Diophantine equation $m_1 + m_2 + m_3 = 21$ subject to $m_1 \ge m_2 \ge 8$ and $1 \le m_3 \le 7$ yields precisely 9 integer solutions:
 \[
-(8, 8, 5),\; (9, 8, 4),\; (10, 8, 3),\; (9, 9, 3),\; (11, 8, 2),\; (10, 9, 2),\; (12, 8, 1),\; (11, 9, 1),\; (10, 10, 1). \qedhere
+\begin{gathered}
+(8, 8, 5),\; (9, 8, 4),\; (10, 8, 3),\; (9, 9, 3),\; (11, 8, 2),\\
+(10, 9, 2),\; (12, 8, 1),\; (11, 9, 1),\; (10, 10, 1).
+\end{gathered}\qedhere
 \]
 \end{proof}
 
@@ -112,7 +116,10 @@ For $n = 8$, total pairs equal $\binom{8}{2} = 28$. Rare distances have $m \le 8
 If there are 3 frequent distances, their sum is at least $9 + 9 + 9 = 27 \le 28$, which allows $m_4 = 28 - 27 = 1$. This yields the partition $(9, 9, 9, 1)$.
 If there are 2 frequent distances $m_1 \ge m_2 \ge 9$, then $m_1 + m_2 \ge 18$, and $m_3 = 28 - (m_1 + m_2) \le 8$. This yields 10 two-frequent partitions:
 \[
-(10, 10, 8),\; (11, 10, 7),\; (11, 11, 6),\; (12, 10, 6),\; (12, 11, 5),\; (12, 12, 4),\; (13, 11, 4),\; (13, 12, 3),\; (13, 13, 2),\; (14, 13, 1).
+\begin{gathered}
+(10, 10, 8),\; (11, 10, 7),\; (11, 11, 6),\; (12, 10, 6),\; (12, 11, 5),\\
+(12, 12, 4),\; (13, 11, 4),\; (13, 12, 3),\; (13, 13, 2),\; (14, 13, 1).
+\end{gathered}
 \]
 Together with $(9, 9, 9, 1)$, there are exactly 11 candidate partitions.
 \end{proof}
