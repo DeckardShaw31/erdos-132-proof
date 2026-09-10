@@ -46,21 +46,3 @@ python verify_asymptotic_energy.py
 ```
 
 ---
-
-## 📄 How to Compile the LaTeX Paper
-
-If you have TeX Live / MiKTeX / Overleaf:
-1. Open [`paper.tex`](file:///c:/Users/proin/Desktop/bountyhunt/132/paper.tex).
-2. Compile with `pdflatex paper.tex` (or paste into [Overleaf](https://www.overleaf.com)).
-3. This will generate the formal academic PDF.
-
----
-
-## 🏆 How to Submit and Claim the $100 Bounty
-
-1. **Submit on the Forum**:
-   - Go to [https://www.erdosproblems.com/forum/thread/132/proof-claims](https://www.erdosproblems.com/forum/thread/132/proof-claims).
-   - Copy and paste the text from [`submission_claim.md`](file:///c:/Users/proin/Desktop/bountyhunt/132/submission_claim.md).
-2. **Open a GitHub PR**:
-   - Go to [https://github.com/teorth/erdosproblems](https://github.com/teorth/erdosproblems).
-   - Submit a PR updating `data/problems.yaml` with the notes as specified in [`submission_claim.md`](file:///c:/Users/proin/Desktop/bountyhunt/132/submission_claim.md).
